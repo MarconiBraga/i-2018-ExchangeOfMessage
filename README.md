@@ -8,6 +8,7 @@ Bem Vindo!!  Abaixo, algumas informações que podem ser relevantes para você!
 
 ## Detalhes do Projeto
  - [Introdução](https://github.com/MarconiBraga/i-2018-ExchangeOfMessage/blob/master/Topico05/docs/Introducao.md)
+ - [Visão Geral](https://github.com/MarconiBraga/i-2018-ExchangeOfMessage/blob/master/Topico05/docs/Visao_Geral.md)
  - [Diagrama de Integração](https://github.com/MarconiBraga/i-2018-ExchangeOfMessage/blob/master/Topico05/docs/Integration_Diagram.pdf)	
  
 ## Equipe
