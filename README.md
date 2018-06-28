@@ -1,6 +1,6 @@
 # i-2018-ExchangeOfMessage
 
-Bem Vindo!!  Abaixo, algumas informações que podem ser relevantes para você!  
+Bem Vindo!! Abaixo, algumas informações que podem ser relevantes para você!  
 
 ## Descrição do Projeto
   
@@ -9,7 +9,7 @@ Bem Vindo!!  Abaixo, algumas informações que podem ser relevantes para você!
 ## Detalhes do Projeto
  - [Introdução](https://github.com/MarconiBraga/i-2018-ExchangeOfMessage/blob/master/Topico05/docs/Introducao.md)
  - [Visão Geral](https://github.com/MarconiBraga/i-2018-ExchangeOfMessage/blob/master/Topico05/docs/Visao_Geral.md)
- - [Requisitos] (https://github.com/MarconiBraga/i-2018-ExchangeOfMessage/blob/master/Topico05/docs/Requisitos.md)
+ - [Requisitos](https://github.com/MarconiBraga/i-2018-ExchangeOfMessage/blob/master/Topico05/docs/Requisitos.md)
  - [Diagrama de Integração](https://github.com/MarconiBraga/i-2018-ExchangeOfMessage/blob/master/Topico05/docs/Integration_Diagram.pdf)	
  
 ## Equipe
@@ -22,5 +22,5 @@ Bem Vindo!!  Abaixo, algumas informações que podem ser relevantes para você!
 
 ## Instruções para importação do projeto
 
- - Após clonar o projeto para o seu PC com o codigo digitado no Prompt (git clone https://github.com/MarconiBraga/i-2018-ExchangeOfMessage.git)
+ - Após clonar o projeto para o seu PC com o código digitado no Prompt (git clone https://github.com/MarconiBraga/i-2018-ExchangeOfMessage.git)
  - <em andamento>	
