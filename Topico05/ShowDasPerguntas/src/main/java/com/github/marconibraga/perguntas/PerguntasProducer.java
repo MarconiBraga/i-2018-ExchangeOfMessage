@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import com.github.marconibraga.enums.CategoriaPerguntas;
 import com.github.marconibraga.model.Pergunta;
 
+
 @Component
 public class PerguntasProducer {
 
@@ -21,11 +22,13 @@ public class PerguntasProducer {
 	@Value("${jsa.activemq.queue.producer}")
 	String queueProducer;
 	
+	/**
+	 * Recebe a categoria. monta e envia a pergunta para a lista no servidor do ActiveMQ
+	 * @param categoriaPerguntas
+	 * @throws JMSException
+	 */
 	public void pushPerguntasGeografia(CategoriaPerguntas categoriaPerguntas) throws JMSException {
 		Pergunta pergunta = PerguntasBuilder.constroiPergunta(categoriaPerguntas);
-		
-//		String json = new Gson().toJson(pergunta, Pergunta.class);
-//		System.out.println(json);
 		
 		jmsTemplate.convertAndSend(queueProducer, pergunta, new MessagePostProcessor() {
 	        public Message postProcessMessage(Message message) throws JMSException {

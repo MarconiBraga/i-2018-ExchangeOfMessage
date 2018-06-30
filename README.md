@@ -16,11 +16,29 @@ Bem Vindo!! Abaixo, algumas informações que podem ser relevantes para você!
 
  - [Marconi Braga](https://github.com/MarconiBraga)
 
+## Funcionamento
+
+	Há duas aplicações, onde ambas se comunicam de forma assíncrona. 
+	Uma das aplicações é responsável por criar e enviar as perguntas para quem estiver "escutando" o canal de perguntas.
+	A outra aplicação estará escutando a "fila" de perguntas cadastradas, ao se conectar à "fila" o cliente (jogador) recebe a pergunta, que por sua fez é removida da "fila" de perguntas. Ao responder a pergunta é enviado de volta para o servidor de perguntas qual a resposta escolhida pelo cliente.
+	A criação e envio das perguntas foi separada por categorias.
+ 
 ## Obtendo o Projeto
 
 `git clone https://github.com/MarconiBraga/i-2018-ExchangeOfMessage.git`  
 
 ## Instruções para importação do projeto
 
- - Após clonar o projeto para o seu PC com o código digitado no Prompt (git clone https://github.com/MarconiBraga/i-2018-ExchangeOfMessage.git)
- - <em andamento>	
+### Baixar o ActiveMQ
+
+- [download ActiveMQ] (http://activemq.apache.org/download.html)
+- rodar o ActiveMQ
+```
+executar ../dir_activemq/activemq.bat
+```
+
+### Executar no diretório de cada aplicação
+```
+mvn clean install
+```
+	
