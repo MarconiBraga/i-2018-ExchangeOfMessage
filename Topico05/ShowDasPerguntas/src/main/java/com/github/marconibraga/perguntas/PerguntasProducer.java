@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import com.github.marconibraga.enums.CategoriaPerguntas;
 import com.github.marconibraga.model.Pergunta;
-import com.google.gson.Gson;
 
 @Component
 public class PerguntasProducer {
@@ -19,16 +18,16 @@ public class PerguntasProducer {
 	@Autowired
 	JmsTemplate jmsTemplate;
 	
-	@Value("${jsa.activemq.queue.producer.geografia}")
-	String queueGeografia;
+	@Value("${jsa.activemq.queue.producer}")
+	String queueProducer;
 	
-	public void pushPerguntasGeografia() throws JMSException {
-		Pergunta pergunta = PerguntasBuilder.constroiPergunta(CategoriaPerguntas.GEOGRAFIA);
+	public void pushPerguntasGeografia(CategoriaPerguntas categoriaPerguntas) throws JMSException {
+		Pergunta pergunta = PerguntasBuilder.constroiPergunta(categoriaPerguntas);
 		
-		String json = new Gson().toJson(pergunta, Pergunta.class);
-		System.out.println(json);
+//		String json = new Gson().toJson(pergunta, Pergunta.class);
+//		System.out.println(json);
 		
-		jmsTemplate.convertAndSend(queueGeografia, json, new MessagePostProcessor() {
+		jmsTemplate.convertAndSend(queueProducer, pergunta, new MessagePostProcessor() {
 	        public Message postProcessMessage(Message message) throws JMSException {
 	            message.setStringProperty("solicitante", "Marconi Braga");
 	            return message;

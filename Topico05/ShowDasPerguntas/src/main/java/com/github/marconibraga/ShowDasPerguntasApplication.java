@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jms.annotation.EnableJms;
 
+import com.github.marconibraga.enums.CategoriaPerguntas;
 import com.github.marconibraga.perguntas.PerguntasProducer;
 
 @SpringBootApplication
@@ -32,7 +33,7 @@ public class ShowDasPerguntasApplication implements CommandLineRunner {
 	}
 
 	/**
-	 * Tela principal para grupo de pesquisas
+	 * Tela principal
 	 * 
 	 * @param scanner
 	 * @throws JMSException
@@ -43,25 +44,28 @@ public class ShowDasPerguntasApplication implements CommandLineRunner {
 		System.out.println("1 - Geografia");
 		System.out.println("2 - Historia");
 		System.out.println("3 - Futebol");
-		System.out.println("4 - Atualidades");
+		System.out.println("4 - Atualidades\n");
 
 		String opcao = scanner.nextLine();
 		switch (opcao) {
 		case "1":
-			perguntasProducer.pushPerguntasGeografia();
+			perguntasProducer.pushPerguntasGeografia(CategoriaPerguntas.GEOGRAFIA);
 			break;
 		case "2":
+			perguntasProducer.pushPerguntasGeografia(CategoriaPerguntas.HISTORIA);
 			break;
 		case "3":
+			perguntasProducer.pushPerguntasGeografia(CategoriaPerguntas.FUTEBOL);
 			break;
 		case "4":
-			break;
-		case "5":
+			perguntasProducer.pushPerguntasGeografia(CategoriaPerguntas.ATUALIDADES);
 			break;
 
 		default:
 			System.out.println("Opção inválida");
 			break;
 		}
+
+		mostraTelaPrincipal(scanner);
 	}
 }
