@@ -39,6 +39,6 @@ executar ../dir_activemq/activemq.bat
 
 ### Executar no diretório de cada aplicação
 ```
-mvn clean install
+mvn spring-boot:run
 ```
 	

@@ -27,7 +27,7 @@ public class PerguntasProducer {
 	 * @param categoriaPerguntas
 	 * @throws JMSException
 	 */
-	public void pushPerguntasGeografia(CategoriaPerguntas categoriaPerguntas) throws JMSException {
+	public void pushPerguntas(CategoriaPerguntas categoriaPerguntas) throws JMSException {
 		Pergunta pergunta = PerguntasBuilder.constroiPergunta(categoriaPerguntas);
 		
 		jmsTemplate.convertAndSend(queueProducer, pergunta, new MessagePostProcessor() {

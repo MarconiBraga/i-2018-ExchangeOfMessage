@@ -49,16 +49,16 @@ public class ShowDasPerguntasApplication implements CommandLineRunner {
 		String opcao = scanner.nextLine();
 		switch (opcao) {
 		case "1":
-			perguntasProducer.pushPerguntasGeografia(CategoriaPerguntas.GEOGRAFIA);
+			perguntasProducer.pushPerguntas(CategoriaPerguntas.GEOGRAFIA);
 			break;
 		case "2":
-			perguntasProducer.pushPerguntasGeografia(CategoriaPerguntas.HISTORIA);
+			perguntasProducer.pushPerguntas(CategoriaPerguntas.HISTORIA);
 			break;
 		case "3":
-			perguntasProducer.pushPerguntasGeografia(CategoriaPerguntas.FUTEBOL);
+			perguntasProducer.pushPerguntas(CategoriaPerguntas.FUTEBOL);
 			break;
 		case "4":
-			perguntasProducer.pushPerguntasGeografia(CategoriaPerguntas.ATUALIDADES);
+			perguntasProducer.pushPerguntas(CategoriaPerguntas.ATUALIDADES);
 			break;
 
 		default:

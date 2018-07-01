@@ -13,4 +13,5 @@ public class Pergunta implements Serializable {
 	private String descricao;
 	private List<Resposta> respostas;
 
+
 }
