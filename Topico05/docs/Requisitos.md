@@ -4,13 +4,13 @@
 
 **RF. 1: Realiza Pergunta.**
  - Descrição: O usuário poderá realizar uma pergunta a outro usuário.
- - Entrada: Conjunto de 'string'.
+ - Entrada: 'string'.
  - Processo: A pergunta será adicionada na fila de um servidor.
  - Saída: Mensagem de confirmação bem sucedido da pergunta caso tenha sido efetuado com sucesso, senão, mensagem de erro.
 
 **RF. 2: Realiza Resposta.**
  - Descrição: O usuário poderá realizar uma resposta a certa pergunta realizada por outro usuário.
- - Entrada: Conjunto de 'string'.
+ - Entrada: 'string'.
  - Processo: A resposta será adicionada na fila de um servidor.
  - Saída: Mensagem de confirmação bem sucedido da resposta caso tenha sido efetuado com sucesso, senão, mensagem de erro.
  
@@ -31,7 +31,7 @@
 #### 1.2.1 Requisitos Organizacionais
 
 **RNF. 1: Software**
- - Será usado uma fila no servidor para gurdar os registros temporariamente.
+ - Será usado duas filas (pergunta e resposta) no servidor para gurdar os registros temporariamente.
  
 **RNF. 2: Linguagem de Programação**
  - O sistema será feito em java, linguagem de progamação orientada a objetos.
@@ -42,7 +42,7 @@
 ### 1. 3. Atributos 
 
 **Disponibilidade:**
- - O sistema deve estar sempre disponível, caso ocorra alguma interrupção ele deve ser restaurado o mais rápido possível.
+ - Não há necessidade das aplicações estarem disponíveis (poderá 'logar' em qualquer momento que desejar) apenas o servidor que deve estar sempre disponível, caso ocorra alguma interrupção ele deve ser restaurado o mais rápido possível.
 
 **Segurança:**
- - Como o sistema trocará mensagens individuais, ele deverá ter uma boa segurança para que não haja registros das mensagens após envio e que nenhum outro usuário consiga visualizar a mensagem do outro.
+ - Como o sistema trocará mensagens individuais, ele deverá ter uma boa segurança para que não haja registros das mensagens após recebimento.
