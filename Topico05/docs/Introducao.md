@@ -12,6 +12,8 @@ A integração deve necessariamente fazer uso de troca de mensagens, ou seja, me
 
 Criação de um jogo de 'Pergunta e Resposta'. Um usuário (produtor de perguntas) realiza uma pergunta, essa pergunta é enviada para o servidor (fila de perguntas) onde ficará até outro usuário (consumidor de perguntas) logar, após logar irá receber essa pergunta, não mantendo nenhum registro da pergunta na fila, então o usuário (além de consumidor de perguntas ele também é um produtor de respostas) poderá responder, após sua resposta ela será enviada para o servidor (fila de respostas) onde ficará até um usuário (produtor de perguntas também é um consumidor de respostas) logar, após logar irá receber a resposta (sairá da fila de respostas sem manter nenhum registro).
 
+* Observação: Não contará com meios de criar perguntas ou respostas (apesar que pode ser implementado), elas já estarão pré-cadastradas (build).
+
 ### 1. 3. Delimitação do Problema 
 
 Troca (assíncrona) de mensagens entre aplicações por meio de uma fila.
