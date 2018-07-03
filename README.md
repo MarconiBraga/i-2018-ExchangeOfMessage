@@ -41,4 +41,6 @@ executar ../dir_activemq/activemq.bat
 ```
 mvn spring-boot:run
 ```
-	
+### Sugestões(Ajuda)
+- Usar o sistema operacional: Windows (maior facilidade de executar o ActiveMQ) ou Linux;
+- Após execução do ActiveMQ retornará um 'localhost', onde poderá verificar os estados de envio e recebimento das perguntas e respostas.
